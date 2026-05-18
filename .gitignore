@@ -1,0 +1,14 @@
+# Virtual environment — never push this (it's huge and machine-specific)
+venv/
+
+# Python cache files — auto-generated, not needed
+__pycache__/
+*.pyc
+*.pyo
+
+# Your trained model (large binary file)
+models/asl_model.pkl
+
+# OS junk
+.DS_Store
+Thumbs.db
