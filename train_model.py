@@ -21,7 +21,7 @@ print("        ASL Model Training")
 print("=" * 50)
 
 # ── Step 1: Load data ──────────────────────────────
-df = pd.read_csv("data/landmarks.csv")
+df = pd.read_csv("data/landmarks_normalized.csv")
 print(f"\nDataset loaded: {len(df)} samples, {df['label'].nunique()} letters")
 
 # Separate features (the 63 numbers) from the label (the letter)
@@ -94,7 +94,7 @@ print("\nConfusion matrix saved to models/confusion_matrix.png")
 # ── Step 6: Save the trained model ────────────────
 # pickle serializes the model object to a file
 # so we can load and use it later without retraining
-model_path = "models/asl_model.pkl"
+model_path = "models/asl_model_normalized.pkl"
 with open(model_path, "wb") as f:
     pickle.dump(model, f)
 
